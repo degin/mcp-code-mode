@@ -1,0 +1,19 @@
+{
+  "name": "mcp-code-mode",
+  "version": "1.0.0",
+  "description": "Measure and cut the context cost of MCP servers: call tools from a script instead of through the model",
+  "type": "module",
+  "license": "MIT",
+  "author": "degin",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "schemas": "node bench/01-schema-cost.mjs",
+    "paths": "node bench/02-task-paths.mjs",
+    "latency": "node bench/03-latency.mjs",
+    "fanout": "node bench/04-fanout.mjs",
+    "billing": "node bench/05-billing.mjs",
+    "list": "node client.mjs $MCP_URL list"
+  },
+  "dependencies": { "gpt-tokenizer": "^4.1.1" },
+  "keywords": ["mcp", "model-context-protocol", "tokens", "cost", "code-mode", "llm-agents"]
+}
